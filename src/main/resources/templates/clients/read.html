@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>КЛИЕНТ</title>
+</head>
+<body>
+<p th:text="${client.getLastName()}"> value </p>
+<p th:text="${client.getFirstName()}"> value </p>
+<p th:text="${client.getPatronymic()}"> value </p>
+<p th:text="${client.getEmail()}"> value </p>
+<p th:text="${client.getId()}"> value </p>
+<a th:href="@{/clients/{id}/edit(id=${client.getId()})}"> РЕДАКТИРОВАТЬ </a>
+<form th:method="DELETE" th:action="@{/clients/{id}/delete(id=${client.getId()})}">
+    <input type="submit" value="УДАЛИТЬ"/>
+</form>
+</body>
+</html>
