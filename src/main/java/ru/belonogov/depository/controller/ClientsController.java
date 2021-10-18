@@ -39,8 +39,8 @@ public class ClientsController {
     @PostMapping()
     public String create(@ModelAttribute("client") @Valid Client client,
                          BindingResult bindingResult) {  //получаем данные из формы(/new) по ключу client(имя не важно)
-        /*if (bindingResult.hasErrors())
-            return "clients/new";*/
+        if (bindingResult.hasErrors())
+            return "clients/new";
 
         clientsServiceInt.create(client);
         return "redirect:/clients";
@@ -56,8 +56,8 @@ public class ClientsController {
     @PostMapping("/{id}")
     public String update(@ModelAttribute("client") @Valid Client client,
                          BindingResult bindingResult, @PathVariable("id") int id) {
-        /*if (bindingResult.hasErrors())
-            return "clients/edit";*/
+        if (bindingResult.hasErrors())
+            return "clients/edit";
 
         clientsServiceInt.update(client, id);
         return "redirect:/clients";
