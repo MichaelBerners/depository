@@ -5,7 +5,7 @@
     <title>НОВЫЙ КЛИЕНТ</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/clients}" th:object="${newClient}">
+<form th:method="POST" th:action="@{/clients}" th:object="${client}">
     <label for="lastName">Введите фамилию</label>
     <input type="text" th:field="*{lastName}" id="lastName"/>
     <div style="color:red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Name Error</div>

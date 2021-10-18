@@ -30,7 +30,7 @@ public class ClientsController {
     }
 
     @GetMapping("/new")
-    public String newClient(@ModelAttribute("newClient") Client client) {
+    public String newClient(@ModelAttribute("client") Client client) {
 //        public String newClient(Model model) {
 //            model.addAttribute("newClient", new Client());
         return "clients/new";
