@@ -9,4 +9,8 @@ public class Bid {
 
     private int id;
     private StatusBidType statusBidType;
+    private String name; //наименование
+    private String units; //единицы измерения 1шт = ?
+    private double price; //цена
+    private int amount; //количество
 }

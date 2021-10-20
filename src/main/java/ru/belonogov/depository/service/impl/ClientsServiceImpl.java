@@ -1,7 +1,8 @@
-package ru.belonogov.depository.service;
+package ru.belonogov.depository.service.impl;
 
 import org.springframework.stereotype.Service;
 import ru.belonogov.depository.models.Client;
+import ru.belonogov.depository.service.ClientsService;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class ClientsServiceImp implements ClientsServiceInt {
+public class ClientsServiceImpl implements ClientsService {
 
     //Хранилище пользователей
     private static final Map<Integer, Client> CLIENT_REPOSITORY_MAP = new HashMap<>();

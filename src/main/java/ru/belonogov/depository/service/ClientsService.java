@@ -4,7 +4,7 @@ import ru.belonogov.depository.models.Client;
 
 import java.util.List;
 
-public interface ClientsServiceInt {
+public interface ClientsService {
 
     //создать нового пользователя
     void create(Client client);
@@ -14,9 +14,6 @@ public interface ClientsServiceInt {
 
     //вывести весь список пользователей
     List<Client> readAll();
-
-    //вывести весь список пользователей
-    //List<Client> readAll(ClientType clientType);
 
     //изменить пользователя с id
     boolean update(Client client, int id);
